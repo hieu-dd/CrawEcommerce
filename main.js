@@ -2,12 +2,12 @@ import fetch from "node-fetch"
 import pg from "pg";
 const { Pool } = pg
 
-const database = process.env.POSTGRES_DB;
+const database = "skynet9" ?? process.env.POSTGRES_DB;
 const credentials = {
-    user: process.env.POSTGRES_USER,
-    host: process.env.POSTGRES_HOST,
-    password: process.env.POSTGRES_PASSWORD,
-    port: process.env.POSTGRES_PORT,
+    user: "postgres" ?? process.env.POSTGRES_USER,
+    host: "localhost" ?? process.env.POSTGRES_HOST,
+    password: "password" ?? process.env.POSTGRES_PASSWORD,
+    port: "5432" ?? process.env.POSTGRES_PORT,
 };
 const dbCredentials = { ...credentials, database: database }
 let pool = new Pool(dbCredentials)
@@ -89,12 +89,32 @@ async function insertProduct(product) {
     }
 }
 
+async function insertProductImages(product_id, url) {
+    try {
+        await pool.query(`INSERT INTO product_images(url,product_id) VALUES('${url}',${product_id});`)
+        console.log(`Insert product images success`)
+    } catch (e) {
+        console.log(`Insert product_images err: `, product_id)
+    }
+}
+
+async function insertAttributes(attr, product_id) {
+    try {
+        await pool.query(`INSERT INTO attibutes(product_id,name,value) VALUES (${product_id},'${attr.name}','${attr.value}');`)
+        console.log(`Insert product_attr success: `, product_id)
+    } catch (e) {
+        console.log(`Insert product_attr err: `, product_id)
+    }
+}
+
 async function insertPlatform() {
     try {
         await pool.query(`INSERT INTO platforms(id,"name") VALUES(1,'tiki');`)
         console.log(`Insert platform success`)
     }
-    catch (e) { }
+    catch (e) {
+        console.log(`Insert platform err`)
+    }
 }
 
 async function craw() {
@@ -118,15 +138,22 @@ async function craw() {
                 if (itemDetail.errors) {
                     console.log("Fetch err:", itemDetail.errors)
                 } else {
-                    insertProduct(itemDetail)
+                    const id = await insertProduct(itemDetail)
+                    if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
+                        await insertProductImages(id, itemDetail.images[0].base_url)
+                    }
+                    let attributes = itemDetail.specifications.flatMap(e => e.attributes);
+                    attributes.forEach(async (attr) => {
+                        await insertAttributes(attr, id)
+                    });
                 }
+
+                hasMore = listingsResponse.data.length > 0
+                page++
             }
-            hasMore = listingsResponse.data.length > 0
-            page++
         }
     }
 }
-
 async function getCategories() {
     const response = await fetch("https://tiki.vn/api/personalish/v1/blocks/categories?block_code=featured_categories", {
         method: 'GET',
@@ -166,9 +193,8 @@ async function getDetail(id) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-async function main() {
+function main() {
     craw()
 }
-
 
 main()
