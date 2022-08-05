@@ -2,15 +2,25 @@ import { database, credentials, dbCredentials } from './credentials.js'
 import pg from "pg";
 const { Pool } = pg
 
-const pool = new Pool(dbCredentials)
+
+let pool = new Pool(credentials)
+const databasePool = new Pool(dbCredentials)
 
 export async function prepareDb() {
     if(!database){
         console.log("Must have env database")
         return
     }
+    
+    try{
+      await pool.query('SELECT NOW()')
+    }catch(e){
+      console.log("Cannot connect Postgres database")
+      return
+    }
+
     try {
-        await pool.query('SELECT NOW()')
+        await databasePool.query('SELECT NOW()')
         console.log(`Db ${database} is ready`)
     } catch (e) {
         await createDatabase()
@@ -18,11 +28,10 @@ export async function prepareDb() {
 }
 
 export async function createDatabase() {
-    let dbPool = new Pool(credentials)
-    await dbPool.query(`CREATE DATABASE ${database}`)
+    await pool.query(`CREATE DATABASE ${database}`)
     console.log(`Create dc ${database} success`)
-    dbPool.end()
-    await pool.query(`CREATE TABLE platforms (
+    pool.end()
+    await databasePool.query(`CREATE TABLE platforms (
         id SERIAL,
         name text,
         created_at timestamp NOT NULL default now(),
@@ -31,7 +40,7 @@ export async function createDatabase() {
       
         CONSTRAINT platforms__pk PRIMARY KEY (id)
       )`)
-    await pool.query(`CREATE TABLE products (
+    await databasePool.query(`CREATE TABLE products (
         id SERIAL,
         name text,
         platform_id integer,
@@ -48,7 +57,7 @@ export async function createDatabase() {
         CONSTRAINT products__pk PRIMARY KEY (id),
         CONSTRAINT products_platform_id__fk FOREIGN KEY (platform_id) REFERENCES platforms(id)
       )`)
-    await pool.query(`CREATE TABLE attibutes (
+    await databasePool.query(`CREATE TABLE attibutes (
         id SERIAL,
         product_id integer,
         name text,
@@ -60,7 +69,7 @@ export async function createDatabase() {
         CONSTRAINT attibutes__pk PRIMARY KEY (id),
         CONSTRAINT attibutes_product_id__fk FOREIGN KEY (product_id) REFERENCES products(id)
       )`)
-    await pool.query(`CREATE TABLE product_images (
+    await databasePool.query(`CREATE TABLE product_images (
         id SERIAL,
         url text,
         product_id integer,
@@ -72,5 +81,5 @@ export async function createDatabase() {
         CONSTRAINT product_images_product_id__fk FOREIGN KEY (product_id) REFERENCES products(id)
       )`)
     console.log(`Create tables success`)
-    pool.end()
+    databasePool.end()
 }
