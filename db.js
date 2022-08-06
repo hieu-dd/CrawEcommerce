@@ -15,10 +15,10 @@ export async function prepareDb() {
   try {
     await pool.query('SELECT NOW()')
   } catch (e) {
+    pool.end()
     console.log("Cannot connect Postgres database")
     return
   } finally {
-    pool.end()
   }
 
   try {
