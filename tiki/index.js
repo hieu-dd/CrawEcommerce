@@ -1,7 +1,6 @@
 import fetch from "node-fetch"
 import pg from "pg";
 import { dbCredentials } from '../credentials.js'
-import { prepareDb } from "../db.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
@@ -46,7 +45,6 @@ async function insertPlatform() {
 }
 
 export async function crawTiki() {
-    await prepareDb()
     await insertPlatform()
     const catsJson = await getCategories()
     for (const cat of catsJson.items) {
@@ -67,6 +65,7 @@ export async function crawTiki() {
                 if (itemDetail.errors) {
                     console.log("Fetch err:", itemDetail.errors)
                 } else {
+                    console.log(`cat: ${catid} page: ${page}`)
                     const id = await insertProduct(itemDetail)
                     if (id) {
                         if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
@@ -78,10 +77,9 @@ export async function crawTiki() {
                         });
                     }
                 }
-
-                hasMore = listingsResponse.data.length > 0
-                page++
             }
+            hasMore = listingsResponse.data.length > 0
+            page++
         }
     }
     pool.end()
