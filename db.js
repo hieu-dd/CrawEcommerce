@@ -85,3 +85,13 @@ export async function createDatabase() {
   console.log(`Create tables success`)
   databasePool.end()
 }
+
+export async function insertPlatform(pool, id, name) {
+  try {
+    await pool.query(`INSERT INTO platforms(id,"name") VALUES(${id},'${name}');`)
+    console.log(`Insert platform success`)
+  }
+  catch (e) {
+    console.log(`Insert platform ${name} err`)
+  }
+}

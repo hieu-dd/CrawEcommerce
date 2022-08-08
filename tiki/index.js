@@ -1,13 +1,15 @@
 import fetch from "node-fetch"
 import pg from "pg";
+import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
+import sleep from "../util.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
 
 async function insertProduct(product) {
     try {
-        const res = await pool.query(`INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',1,null,'description','${product.short_url}',null,${product.price},${product.original_price}) RETURNING id;`)
+        const res = await pool.query(`INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',1,null,'${product.description}','${product.short_url}',null,${product.price},${product.original_price}) RETURNING id;`)
         console.log("insert success: ", product.name)
         return res.rows[0].id
     } catch (e) {
@@ -34,18 +36,8 @@ async function insertAttributes(attr, product_id) {
     }
 }
 
-async function insertPlatform() {
-    try {
-        await pool.query(`INSERT INTO platforms(id,"name") VALUES(1,'tiki');`)
-        console.log(`Insert platform success`)
-    }
-    catch (e) {
-        console.log(`Insert platform err`)
-    }
-}
-
 export async function crawTiki() {
-    await insertPlatform()
+    await insertPlatform(pool, 1, 'tiki')
     const catsJson = await getCategories()
     for (const cat of catsJson.items) {
         let page = 0;
@@ -118,8 +110,4 @@ async function getDetail(id) {
     });
     const jsonResponse = await response.json();
     return jsonResponse
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
