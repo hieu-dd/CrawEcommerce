@@ -91,9 +91,10 @@ async function getDetail(id, shopId) {
 async function insertProduct(product) {
     try {
         const url = `${base_url}${product.name}-i.${product.shopid}.${product.itemid}`
-        const query = `INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',2,${product.shopid},'${product.description}','${url}','${product.brand}',${product.price / unit},${product.price_max_before_discount / unit}) RETURNING id;`
+        let query = `INSERT INTO products(name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;`
+        let values = [product.name, 2, product.shopid, product.description, url, product.brand, product.price / unit, product.price_max_before_discount / unit];
         console.log(query)
-        const res = await pool.query(query)
+        const res = await pool.query(query, values)
         console.log("insert success: ", product.name)
         return res.rows[0].id
     } catch (e) {

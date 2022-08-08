@@ -8,8 +8,10 @@ const { Pool } = pg
 let pool = new Pool(dbCredentials)
 
 async function insertProduct(product) {
+    let query = `INSERT INTO products(name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;`
+    let values = [product.name, 1, null, product.description, product.short_url, null, product.price, product.original_price];
     try {
-        const res = await pool.query(`INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',1,null,'${product.description}','${product.short_url}',null,${product.price},${product.original_price}) RETURNING id;`)
+        const res = await pool.query(query, values)
         console.log("insert success: ", product.name)
         return res.rows[0].id
     } catch (e) {
