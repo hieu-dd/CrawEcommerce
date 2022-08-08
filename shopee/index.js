@@ -1,6 +1,12 @@
 import fetch from "node-fetch"
-import { sleep } from "../util.js";
+import pg from "pg";
 import { insertPlatform } from "../db.js";
+import { dbCredentials } from '../credentials.js'
+import { sleep } from "../util.js";
+const { Pool } = pg
+
+let pool = new Pool(dbCredentials)
+
 const base_url = 'https://shopee.vn/'
 const base_file_url = 'https://cf.shopee.vn/file/'
 const unit = 100000
@@ -33,11 +39,11 @@ export async function crawShopee() {
                     console.log(`cat: ${catid} page: ${page}`)
                     const id = await insertProduct(itemDetail)
                     if (id) {
-                        itemDetail.images.forEach(async (image) => {
+                        item.images && itemDetail.images.forEach(async (image) => {
                             const url = `${base_file_url}${image}`
                             await insertProductImages(id, url)
                         });
-                        itemDetail.attributes.forEach(async (attr) => {
+                        itemDetail.attributes && itemDetail.attributes.forEach(async (attr) => {
                             await insertAttributes(attr, id)
                         });
                     }
@@ -85,7 +91,9 @@ async function getDetail(id, shopId) {
 async function insertProduct(product) {
     try {
         const url = `${base_url}${product.name}-i.${product.shopid}.${product.itemid}`
-        const res = await pool.query(`INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',2,null,${product.shopid},'${url}','${product.brand}',${product.price / unit},${product.price_max_before_discount / unit}) RETURNING id;`)
+        const query = `INSERT INTO products(id,name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES(DEFAULT,'${product.name}',2,${product.shopid},'${product.description}','${url}','${product.brand}',${product.price / unit},${product.price_max_before_discount / unit}) RETURNING id;`
+        console.log(query)
+        const res = await pool.query(query)
         console.log("insert success: ", product.name)
         return res.rows[0].id
     } catch (e) {

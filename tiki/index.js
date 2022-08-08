@@ -2,7 +2,7 @@ import fetch from "node-fetch"
 import pg from "pg";
 import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
-import sleep from "../util.js";
+import { sleep } from "../util.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
