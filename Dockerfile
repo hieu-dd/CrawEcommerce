@@ -6,6 +6,7 @@ COPY tiki/index.js /app/tiki
 COPY shopee/index.js /app/shopee
 COPY lazada/index.js /app/lazada
 COPY credentials.js /app
+COPY util.js /app
 COPY db.js /app
 COPY main.js /app
 RUN npm install
