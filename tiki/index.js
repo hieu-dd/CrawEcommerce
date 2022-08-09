@@ -39,7 +39,7 @@ async function insertAttributes(attr, product_id) {
 }
 
 export async function crawTiki() {
-    let crawCount = 0
+    let crawedCount = 0
     await insertPlatform(pool, 1, 'tiki')
     const catsJson = await getCategories()
     for (const cat of catsJson.items) {
@@ -60,11 +60,10 @@ export async function crawTiki() {
                 if (itemDetail.errors) {
                     console.log("Fetch err:", itemDetail.errors)
                 } else {
-                    console.log(`cat: ${catid} page: ${page}`)
+                    crawedCount++
+                    console.log("Tiki crawed: ", crawedCount, "catid: ", catid, "page:", page)
                     const id = await insertProduct(itemDetail)
                     if (id) {
-                        crawCount++
-                        console.log("Craw success count: ", crawCount)
                         if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
                             await insertProductImages(id, itemDetail.images[0].base_url)
                         }

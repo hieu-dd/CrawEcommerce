@@ -3,6 +3,7 @@ import pg from "pg";
 import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
+import fs from 'fs-extra'
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
@@ -11,6 +12,12 @@ const base_url = 'https://shopee.vn/'
 const base_file_url = 'https://cf.shopee.vn/file/'
 const unit = 100000
 export async function crawShopee() {
+
+    let crawedCount = 0
+    let crawedErr = 0
+    let times = []
+    let errTime = {}
+
     await insertPlatform(pool, 2, 'shopee')
     const catsJson = await getCategories()
     for (const cat of catsJson.data.categories) {
@@ -33,10 +40,21 @@ export async function crawShopee() {
                 await sleep(1500);
                 const data = await getDetail(item.itemid, item.shopid)
                 if (data.error || data.error_msg) {
+                    crawedErr++
+                    if (!errTime.start) {
+                        errTime.start = new Date().getTime()
+                    }
                     console.log("err: ", data)
+                    await sleep(60000 * 3)
                 } else {
+                    if (errTime.start) {
+                        errTime.end = new Date().getTime()
+                        times.push(errTime)
+                        errTime = {}
+                    }
                     const itemDetail = data.data
-                    console.log(`cat: ${catid} page: ${page}`)
+                    crawedCount++
+                    console.log("Shopee crawed: ", crawedCount, "catid: ", catid, "page:", page)
                     const id = await insertProduct(itemDetail)
                     if (id) {
                         item.images && itemDetail.images.forEach(async (image) => {
@@ -54,6 +72,7 @@ export async function crawShopee() {
             page++
         }
     }
+    fs.writeFileSync('errTimes.json', times)
 }
 
 async function getCategories() {

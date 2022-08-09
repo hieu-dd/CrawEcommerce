@@ -3,6 +3,7 @@
     "dependencies": {
         "cheerio": "^1.0.0-rc.12",
         "fs-extra": "^10.1.0",
+        "jslint": "^0.12.1",
         "node-fetch": "^3.2.9",
         "pg": "^8.7.3",
         "request-promise": "^4.2.6"
