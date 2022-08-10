@@ -13,7 +13,7 @@ const base_file_url = 'https://cf.shopee.vn/file/'
 const unit = 100000
 const LIMIT_ERR = 90309999
 export async function crawShopee() {
-
+    console.log("Craw shopee start")
     let crawedCount = 0
     let crawedErr = 0
     let times = []
@@ -119,9 +119,6 @@ async function getDetail(id, shopId) {
 }
 
 async function insertProduct(product) {
-    console.log("insert success: ", product.name)
-
-    return 0
     try {
         const url = `${base_url}${product.name}-i.${product.shopid}.${product.itemid}`
         let query = `INSERT INTO products(name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;`
@@ -152,10 +149,4 @@ async function insertAttributes(attr, product_id) {
         console.log(`Insert product_attr err: `, product_id)
     }
 }
-
-async function test() {
-    crawShopee()
-}
-
-test()
 

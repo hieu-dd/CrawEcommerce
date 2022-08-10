@@ -39,6 +39,7 @@ async function insertAttributes(attr, product_id) {
 }
 
 export async function crawTiki() {
+    console.log("Craw tiki start")
     let crawedCount = 0
     await insertPlatform(pool, 1, 'tiki')
     const catsJson = await getCategories()

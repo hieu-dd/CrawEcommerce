@@ -1,6 +1,6 @@
-docker build . -t helldemon1994/14h:<version> --platform linux/amd64
-docker image tag helldemon1994/14h helldemon1994/14h:<version>
-docker push helldemon1994/14h:<version>
-docker run --network=host -e POSTGRES_PASSWORD=password -e POSTGRES_DB=skynet -e PLATFORM=shopee helldemon1994/14h:<version>
+docker build . -t helldemon1994/craw --platform linux/amd64
+docker image tag helldemon1994/craw helldemon1994/craw:<version>
+docker push helldemon1994/craw:<version>
+docker run --network=host -e POSTGRES_PASSWORD=password -e POSTGRES_DB=skynet -e PLATFORM=shopee helldemon1994/craw:<version>
 docker logs -f <imageid>
 ssh root@27.71.237.104
