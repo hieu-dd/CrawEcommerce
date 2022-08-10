@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+import fetch from "node-fetch";
 import pg from "pg";
 import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
@@ -11,6 +11,7 @@ let pool = new Pool(dbCredentials)
 const base_url = 'https://shopee.vn/'
 const base_file_url = 'https://cf.shopee.vn/file/'
 const unit = 100000
+const LIMIT_ERR = 90309999
 export async function crawShopee() {
 
     let crawedCount = 0
@@ -37,33 +38,43 @@ export async function crawShopee() {
                 continue
             }
             for (const item of sections.data.item) {
-                await sleep(1500);
-                const data = await getDetail(item.itemid, item.shopid)
-                if (data.error || data.error_msg) {
-                    crawedErr++
-                    if (!errTime.start) {
-                        errTime.start = new Date().getTime()
+                let failedTime = 0
+                while (failedTime < 5) {
+                    await sleep(2000);
+                    const data = await getDetail(item.itemid, item.shopid)
+                    if (data.error && data.error == LIMIT_ERR) {
+                        crawedErr++
+                        if (!errTime.start) {
+                            errTime.start = new Date().getTime()
+                        }
+                        console.log("Err limit: ", data)
+                        await sleep(60000 * (failedTime ? 2 : 8))
+                        failedTime++
+                    } else if (data.error) {
+                        failedTime++
+                        console.log("Err: ", data)
+                        continue
                     }
-                    console.log("err: ", data)
-                    await sleep(60000 * 3)
-                } else {
-                    if (errTime.start) {
-                        errTime.end = new Date().getTime()
-                        times.push(errTime)
-                        errTime = {}
-                    }
-                    const itemDetail = data.data
-                    crawedCount++
-                    console.log("Shopee crawed: ", crawedCount, "catid: ", catid, "page:", page)
-                    const id = await insertProduct(itemDetail)
-                    if (id) {
-                        item.images && itemDetail.images.forEach(async (image) => {
-                            const url = `${base_file_url}${image}`
-                            await insertProductImages(id, url)
-                        });
-                        itemDetail.attributes && itemDetail.attributes.forEach(async (attr) => {
-                            await insertAttributes(attr, id)
-                        });
+                    else {
+                        if (errTime.start) {
+                            errTime.end = new Date().getTime()
+                            times.push(errTime)
+                            errTime = {}
+                        }
+                        const itemDetail = data.data
+                        crawedCount++
+                        console.log("Shopee crawed: ", crawedCount, "catid: ", catid, "page:", page)
+                        const id = await insertProduct(itemDetail)
+                        if (id) {
+                            item.images && itemDetail.images.forEach(async (image) => {
+                                const url = `${base_file_url}${image}`
+                                await insertProductImages(id, url)
+                            });
+                            itemDetail.attributes && itemDetail.attributes.forEach(async (attr) => {
+                                await insertAttributes(attr, id)
+                            });
+                        }
+                        break
                     }
                 }
             }
@@ -99,7 +110,7 @@ async function getDetail(id, shopId) {
     const response = await fetch(url, {
         method: 'GET',
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+            'User-Agent': 'xx',
             'Host': 'shopee.vn'
         },
     });
@@ -108,11 +119,13 @@ async function getDetail(id, shopId) {
 }
 
 async function insertProduct(product) {
+    console.log("insert success: ", product.name)
+
+    return 0
     try {
         const url = `${base_url}${product.name}-i.${product.shopid}.${product.itemid}`
         let query = `INSERT INTO products(name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;`
         let values = [product.name, 2, product.shopid, product.description, url, product.brand, product.price / unit, product.price_max_before_discount / unit];
-        console.log(query)
         const res = await pool.query(query, values)
         console.log("insert success: ", product.name)
         return res.rows[0].id
@@ -139,3 +152,10 @@ async function insertAttributes(attr, product_id) {
         console.log(`Insert product_attr err: `, product_id)
     }
 }
+
+async function test() {
+    crawShopee()
+}
+
+test()
+
