@@ -3,7 +3,7 @@ import pg from "pg";
 import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
-import { getCategories } from "./categories.js";
+import { getCategories } from "./category.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
