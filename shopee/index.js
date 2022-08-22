@@ -4,6 +4,7 @@ import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
 import fs from 'fs-extra'
+import { getCategories } from "./category.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
@@ -20,10 +21,10 @@ export async function crawShopee() {
     let errTime = {}
 
     await insertPlatform(pool, 2, 'shopee')
-    const catsJson = await getCategories()
-    for (const cat of catsJson.data.categories) {
+    const categories = await getCategories()
+    for (const cat of categories) {
         let page = 0;
-        let catid = cat.category_id
+        let catid = cat.id
         if (catid <= 0) {
             continue
         }
@@ -86,17 +87,6 @@ export async function crawShopee() {
     fs.writeFileSync('errTimes.json', times)
 }
 
-async function getCategories() {
-    const response = await fetch(`https://shopee.vn/api/v4/official_shop/get_categories?tab_type=1`, {
-        method: 'GET',
-        headers: {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
-        },
-    });
-    const categoriesJson = await response.json();
-    return categoriesJson
-}
-
 async function getRecommened(catid, offset) {
     const response = await fetch(`https://shopee.vn/api/v4/recommend/recommend?bundle=mall_popular&catid=${catid}&item_card=2&limit=100&offset=${offset}`, {
         method: 'GET',
@@ -149,4 +139,3 @@ async function insertAttributes(attr, product_id) {
         console.log(`Insert product_attr err: `, product_id)
     }
 }
-
