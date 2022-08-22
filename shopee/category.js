@@ -2,46 +2,34 @@ import cheerio from 'cheerio';
 import fs from 'fs-extra'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
+import { updateString } from '../util.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-async function getCategories() {
+export async function getCategories() {
+    const categories = []
+    const html = fs.readFileSync(__dirname + "/categories.html")
 
-    fs.readFile(__dirname + "/categories.html", function (error, html) {
-        if (error) {
-            throw error;
-        }
-        const categories = []
-        const $ = cheerio.load(html)
-        $('.oUjVe').each((index, col) => {
-            const category = {
-                children: []
+    const $ = cheerio.load(html)
+    $('.oUjVe').each((_, col) => {
+        const $col = cheerio.load(col)
+        let parentId
+        let parentName
+        $col('a').each((i, a) => {
+            const name = updateString($col(a).text())
+            const hrefs = $col(a).attr('href').split('.')
+            const id = hrefs[hrefs.length - 1]
+            if (i) {
+                categories.push({
+                    name,
+                    id,
+                    parentId,
+                    parentName,
+                })
+            } else {
+                parentId = id
+                parentName = name
             }
-            const $col = cheerio.load(col)
-            $col('a').each((i, a) => {
-                const name = updateString($col(a).text().replace('\n', ' '))
-                const id = $col(a).attr('href')
-                if (i) {
-                    category.children.push({
-                        name: name,
-                        id: id
-                    })
-                } else {
-                    category.name = name
-                    category.id = id
-                }
-            })
-            categories.push(category)
-
         })
-        console.log(categories[1])
-    });
-
-
+    })
+    return categories
 }
-
-function updateString(s) {
-    return s.text.split(" ").join(' ')
-}
-
-getCategories()

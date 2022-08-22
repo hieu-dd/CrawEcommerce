@@ -3,6 +3,7 @@ import pg from "pg";
 import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
+import { getCategories } from "./categories.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
@@ -42,8 +43,9 @@ export async function crawTiki() {
     console.log("Craw tiki start")
     let crawedCount = 0
     await insertPlatform(pool, 1, 'tiki')
-    const catsJson = await getCategories()
-    for (const cat of catsJson.items) {
+    const categories = await getCategories()
+    console.log(categories)
+    for (const cat of categories) {
         let page = 0;
         let catid = cat.id
         if (catid <= 0) {
@@ -80,17 +82,6 @@ export async function crawTiki() {
         }
     }
     pool.end()
-}
-async function getCategories() {
-    const response = await fetch("https://tiki.vn/api/personalish/v1/blocks/categories?block_code=featured_categories", {
-        method: 'GET',
-        headers: {
-            'accept': 'application/json, text/plain, */*',
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
-        },
-    });
-    const jsonResponse = await response.json();
-    return jsonResponse
 }
 
 async function getListings(catid, page) {
