@@ -5,12 +5,12 @@ import { dirname } from 'path';
 import { updateString } from '../util.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-export async function getCategories() {
+export function getCategories() {
     const categories = []
     const html = fs.readFileSync(__dirname + "/categories.html")
 
     const $ = cheerio.load(html)
-    $('.iBByno').each((_, col) => {
+    $('.iBByno').each((index, col) => {
         const $col = cheerio.load(col)
         let parentId
         let parentName

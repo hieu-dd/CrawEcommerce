@@ -1,0 +1,1493 @@
+[
+    {
+        "name": "Thời Trang Cho Mẹ Và Bé",
+        "id": "11603",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Đồ chơi",
+        "id": "5250",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Đồ dùng cho bé",
+        "id": "11601",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Chăm sóc nhà cửa",
+        "id": "15078",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Chăm sóc mẹ mang thai, sau sinh",
+        "id": "2640",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Dinh dưỡng cho bé",
+        "id": "8339",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Tã, Bỉm",
+        "id": "2551",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Dinh dưỡng cho người lớn",
+        "id": "10418",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Dinh dưỡng cho mẹ",
+        "id": "10416",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Thực phẩm ăn dặm",
+        "id": "6568",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Chuẩn bị mang thai",
+        "id": "10570",
+        "parentId": "2549",
+        "parentName": "Đồ Chơi - Mẹ & Bé",
+        "baseId": 10001
+    },
+    {
+        "name": "Trái Cây",
+        "id": "44824",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Thịt, Trứng",
+        "id": "54276",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Cá, thuỷ hải sản",
+        "id": "54290",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Rau củ quả",
+        "id": "54302",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Thực phẩm Việt",
+        "id": "54316",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Sữa, bơ, phô mai",
+        "id": "54330",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Đông lạnh, mát",
+        "id": "54344",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Dầu ăn, gia vị",
+        "id": "54362",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Gạo, mì, nông sản",
+        "id": "54384",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Đồ hộp, đóng gói",
+        "id": "54398",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Bia, đồ uống",
+        "id": "54412",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Thực phẩm chay",
+        "id": "54430",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Dành cho trẻ em",
+        "id": "54438",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Bánh kẹo, giỏ quà",
+        "id": "54452",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Thức ăn, đồ thú cưng",
+        "id": "54466",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Chăm sóc cá nhân",
+        "id": "54474",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Chăm sóc nhà cửa",
+        "id": "54500",
+        "parentId": "di-ho-online",
+        "parentName": "Thực Phẩm Tươi Sống",
+        "baseId": 10006
+    },
+    {
+        "name": "Điện thoại Smartphone",
+        "id": "1795",
+        "parentId": "1789",
+        "parentName": "Điện Thoại - Máy Tính Bảng",
+        "baseId": 10009
+    },
+    {
+        "name": "Điện thoại bàn",
+        "id": "8061",
+        "parentId": "1789",
+        "parentName": "Điện Thoại - Máy Tính Bảng",
+        "baseId": 10009
+    },
+    {
+        "name": "Điện thoại phổ thông",
+        "id": "1796",
+        "parentId": "1789",
+        "parentName": "Điện Thoại - Máy Tính Bảng",
+        "baseId": 10009
+    },
+    {
+        "name": "Máy đọc sách",
+        "id": "28856",
+        "parentId": "1789",
+        "parentName": "Điện Thoại - Máy Tính Bảng",
+        "baseId": 10009
+    },
+    {
+        "name": "Máy tính bảng",
+        "id": "1794",
+        "parentId": "1789",
+        "parentName": "Điện Thoại - Máy Tính Bảng",
+        "baseId": 10009
+    },
+    {
+        "name": "Chăm sóc da mặt",
+        "id": "1582",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Dụng cụ làm đẹp",
+        "id": "2306",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Thực phẩm chức năng",
+        "id": "2322",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Trang điểm",
+        "id": "1584",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Chăm sóc cơ thể",
+        "id": "1592",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Máy Massage & Thiết bị chăm sóc sức khỏe",
+        "id": "2307",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Sản phẩm thiên nhiên & Khác",
+        "id": "5873",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Chăm sóc tóc và da đầu",
+        "id": "1591",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Chăm sóc cá nhân",
+        "id": "1594",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Nước hoa",
+        "id": "1595",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Hỗ trợ tình dục",
+        "id": "8142",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Bộ sản phẩm làm đẹp",
+        "id": "8161",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Dược mỹ phẩm",
+        "id": "5874",
+        "parentId": "1520",
+        "parentName": "Làm Đẹp - Sức Khỏe",
+        "baseId": 100015
+    },
+    {
+        "name": "Đồ dùng nhà bếp",
+        "id": "1884",
+        "parentId": "1882",
+        "parentName": "Điện Gia Dụng",
+        "baseId": 10005
+    },
+    {
+        "name": "Thiết bị gia đình",
+        "id": "1946",
+        "parentId": "1882",
+        "parentName": "Điện Gia Dụng",
+        "baseId": 10005
+    },
+    {
+        "name": "Áo nữ",
+        "id": "1698",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Đầm nữ",
+        "id": "941",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Quần nữ",
+        "id": "27600",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Áo liền quần - Bộ trang phục",
+        "id": "1702",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Áo khoác nữ",
+        "id": "936",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Đồ ngủ - Đồ mặc nhà nữ",
+        "id": "1508",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Chân váy",
+        "id": "5404",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Trang phục bơi nữ",
+        "id": "6179",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Thời trang bầu và sau sinh",
+        "id": "49372",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Thời trang trung niên",
+        "id": "49384",
+        "parentId": "931",
+        "parentName": "Thời trang nữ",
+        "baseId": 10003
+    },
+    {
+        "name": "Áo thun nam",
+        "id": "917",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Quần nam",
+        "id": "27562",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Áo vest - Áo khoác nam",
+        "id": "925",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Áo sơ mi nam",
+        "id": "918",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Đồ lót nam",
+        "id": "27548",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Áo hoodie nam",
+        "id": "10382",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Đồ ngủ, đồ mặc nhà nam",
+        "id": "27570",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Đồ đôi - Đồ gia đình nam",
+        "id": "49516",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Áo nỉ - Áo len nam",
+        "id": "4546",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Đồ bơi - Đồ đi biển nam",
+        "id": "16004",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Quần áo nam trung niên",
+        "id": "49532",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Quần áo nam kích cỡ lớn",
+        "id": "49524",
+        "parentId": "915",
+        "parentName": "Thời trang nam",
+        "baseId": 10002
+    },
+    {
+        "name": "Giày cao gót",
+        "id": "8355",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Dép - Guốc nữ",
+        "id": "984",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày thể thao nữ",
+        "id": "27604",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày sandals nữ",
+        "id": "4550",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày búp bê",
+        "id": "1192",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày boots nữ",
+        "id": "981",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày lười nữ",
+        "id": "4551",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Phụ kiện giày",
+        "id": "8357",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày Đế xuồng nữ",
+        "id": "1008",
+        "parentId": "1703",
+        "parentName": "Giày - Dép nữ",
+        "baseId": 100010
+    },
+    {
+        "name": "Giày lười nam",
+        "id": "5340",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Giày tây nam",
+        "id": "1581",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Giày thể thao nam",
+        "id": "27572",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Dép nam",
+        "id": "5342",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Giày sandals nam",
+        "id": "5341",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Phụ kiện giày nam",
+        "id": "8338",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Giày boots nam",
+        "id": "8337",
+        "parentId": "1686",
+        "parentName": "Giày - Dép nam",
+        "baseId": 100011
+    },
+    {
+        "name": "Túi đeo chéo, túi đeo vai nữ",
+        "id": "4558",
+        "parentId": "976",
+        "parentName": "Túi thời trang nữ",
+        "baseId": 10004
+    },
+    {
+        "name": "Ví nữ",
+        "id": "4561",
+        "parentId": "976",
+        "parentName": "Túi thời trang nữ",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi xách tay nữ",
+        "id": "4560",
+        "parentId": "976",
+        "parentName": "Túi thời trang nữ",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi tote nữ",
+        "id": "4559",
+        "parentId": "976",
+        "parentName": "Túi thời trang nữ",
+        "baseId": 10004
+    },
+    {
+        "name": "Phụ kiện túi",
+        "id": "8352",
+        "parentId": "976",
+        "parentName": "Túi thời trang nữ",
+        "baseId": 10004
+    },
+    {
+        "name": "Ví nam",
+        "id": "959",
+        "parentId": "27616",
+        "parentName": "Túi thời trang nam",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi đeo chéo nam",
+        "id": "958",
+        "parentId": "27616",
+        "parentName": "Túi thời trang nam",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi xách công sở nam",
+        "id": "5337",
+        "parentId": "27616",
+        "parentName": "Túi thời trang nam",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi bao tử, túi đeo bụng",
+        "id": "49650",
+        "parentId": "27616",
+        "parentName": "Túi thời trang nam",
+        "baseId": 10004
+    },
+    {
+        "name": "Balo",
+        "id": "27608",
+        "parentId": "6000",
+        "parentName": "Balo và Vali",
+        "baseId": 10004
+    },
+    {
+        "name": "Túi du lịch và phụ kiện",
+        "id": "8387",
+        "parentId": "6000",
+        "parentName": "Balo và Vali",
+        "baseId": 10004
+    },
+    {
+        "name": "Balo, cặp, túi chống sốc laptop",
+        "id": "27612",
+        "parentId": "6000",
+        "parentName": "Balo và Vali",
+        "baseId": 10004
+    },
+    {
+        "name": "Vali, phụ kiện vali",
+        "id": "6526",
+        "parentId": "6000",
+        "parentName": "Balo và Vali",
+        "baseId": 10004
+    },
+    {
+        "name": "Phụ kiện thời trang nữ",
+        "id": "975",
+        "parentId": "27498",
+        "parentName": "Phụ kiện thời trang",
+        "baseId": 10004
+    },
+    {
+        "name": "Mắt kính",
+        "id": "8370",
+        "parentId": "27498",
+        "parentName": "Phụ kiện thời trang",
+        "baseId": 10004
+    },
+    {
+        "name": "Phụ kiện thời trang nam",
+        "id": "27550",
+        "parentId": "27498",
+        "parentName": "Phụ kiện thời trang",
+        "baseId": 10004
+    },
+    {
+        "name": "Trang sức",
+        "id": "8374",
+        "parentId": "8371",
+        "parentName": "Đồng hồ và Trang sức",
+        "baseId": 100019
+    },
+    {
+        "name": "Đồng hồ nữ",
+        "id": "977",
+        "parentId": "8371",
+        "parentName": "Đồng hồ và Trang sức",
+        "baseId": 100019
+    },
+    {
+        "name": "Đồng hồ nam",
+        "id": "1778",
+        "parentId": "8371",
+        "parentName": "Đồng hồ và Trang sức",
+        "baseId": 100019
+    },
+    {
+        "name": "Phụ kiện đồng hồ",
+        "id": "27542",
+        "parentId": "8371",
+        "parentName": "Đồng hồ và Trang sức",
+        "baseId": 100019
+    },
+    {
+        "name": "Đồng hồ trẻ em",
+        "id": "11375",
+        "parentId": "8371",
+        "parentName": "Đồng hồ và Trang sức",
+        "baseId": 100019
+    },
+    {
+        "name": "Linh Kiện Máy Tính - Phụ Kiện Máy Tính",
+        "id": "8129",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "Thiết Bị Văn Phòng - Thiết Bị Ngoại Vi",
+        "id": "12884",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "Thiết Bị Mạng",
+        "id": "2663",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "Thiết Bị Lưu Trữ",
+        "id": "8060",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "PC - Máy Tính Bộ",
+        "id": "8093",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "Laptop",
+        "id": "8095",
+        "parentId": "1846",
+        "parentName": "Laptop - Máy Vi Tính - Linh kiện",
+        "baseId": 100012
+    },
+    {
+        "name": "Trang trí nhà cửa",
+        "id": "1973",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Dụng cụ nhà bếp",
+        "id": "1951",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Sửa chữa nhà cửa",
+        "id": "1974",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Ngoài trời & sân vườn",
+        "id": "2223",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Nội thất",
+        "id": "2150",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Đèn & thiết bị chiếu sáng",
+        "id": "2015",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Đồ dùng và thiết bị nhà tắm",
+        "id": "1966",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Đồ dùng phòng ăn",
+        "id": "1954",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Đồ dùng phòng ngủ",
+        "id": "8313",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Đồ thờ cúng",
+        "id": "23054",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Nhạc cụ",
+        "id": "10068",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Hoa tươi và cây cảnh",
+        "id": "18852",
+        "parentId": "1883",
+        "parentName": "Nhà Cửa - Đời Sống",
+        "baseId": 100016
+    },
+    {
+        "name": "Chăm sóc thú cưng",
+        "id": "5451",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Đồ uống - Pha chế dạng bột",
+        "id": "22998",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Thực phẩm Đóng hộp và Khô",
+        "id": "15074",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Gia Vị và Chế Biến",
+        "id": "4422",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Đậu & Hạt Các Loại",
+        "id": "53620",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Đồ Ăn Vặt",
+        "id": "4421",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Sữa và các Sản phẩm từ sữa",
+        "id": "53562",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Đồ Uống Không Cồn",
+        "id": "24024",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Đồ uống có cồn",
+        "id": "53582",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Bộ quà tặng",
+        "id": "11347",
+        "parentId": "4384",
+        "parentName": "Bách Hóa Online",
+        "baseId": 10006
+    },
+    {
+        "name": "Nhà Cửa - Đời Sống",
+        "id": "21268",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100016
+    },
+    {
+        "name": "Thời Trang",
+        "id": "21442",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100018
+    },
+    {
+        "name": "Ô tô, xe máy, xe đạp",
+        "id": "21346",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100017
+    },
+    {
+        "name": "Thiết Bị Số - Phụ Kiện Số",
+        "id": "21382",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10005
+    },
+    {
+        "name": "Thể thao - Dã ngoại",
+        "id": "21356",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10008
+    },
+    {
+        "name": "Làm Đẹp - Sức Khỏe",
+        "id": "20908",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100015
+    },
+    {
+        "name": "Sách, Văn phòng phẩm & Quà lưu niệm",
+        "id": "21298",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100018
+    },
+    {
+        "name": "Mẹ & Bé",
+        "id": "21166",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10001
+    },
+    {
+        "name": "Điện gia dụng",
+        "id": "20824",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10005
+    },
+    {
+        "name": "Bách hóa online",
+        "id": "20766",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10006
+    },
+    {
+        "name": "Máy Ảnh - Máy Quay Phim",
+        "id": "21134",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100014
+    },
+    {
+        "name": "Laptop & Máy Vi Tính",
+        "id": "21074",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 100012
+    },
+    {
+        "name": "Sản phẩm - thiết bị công nghiệp",
+        "id": "25036",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10005
+    },
+    {
+        "name": "Tivi & Thiết Bị Nghe Nhìn",
+        "id": "21496",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10005
+    },
+    {
+        "name": "Điện Thoại - Máy Tính Bảng",
+        "id": "21054",
+        "parentId": "17166",
+        "parentName": "Hàng Quốc Tế",
+        "baseId": 10009
+    },
+    {
+        "name": "Phụ Kiện Điện Thoại và Máy Tính Bảng",
+        "id": "8214",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 10009
+    },
+    {
+        "name": "Phụ kiện máy tính và Laptop",
+        "id": "28670",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 100012
+    },
+    {
+        "name": "Thiết Bị Âm Thanh và Phụ Kiện",
+        "id": "8215",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 10005
+    },
+    {
+        "name": "Thiết Bị Thông Minh và Linh Kiện Điện Tử",
+        "id": "28432",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 10005
+    },
+    {
+        "name": "Thiết Bị Đeo Thông Minh và Phụ Kiện",
+        "id": "8039",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 10005
+    },
+    {
+        "name": "Thiết Bị Chơi Game và Phụ Kiện",
+        "id": "2667",
+        "parentId": "1815",
+        "parentName": "Thiết Bị Số - Phụ Kiện Số",
+        "baseId": 10005
+    },
+    {
+        "name": "Thanh toán hóa đơn",
+        "id": "s1",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Khóa học",
+        "id": "11332",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Du lịch - Khách sạn",
+        "id": "11319",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Spa & Làm đẹp",
+        "id": "11322",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Dịch vụ khác",
+        "id": "11334",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Nhà hàng - Ăn uống",
+        "id": "11313",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Sự kiện - Giải trí",
+        "id": "11327",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Nha khoa - Sức khỏe",
+        "id": "11326",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Phiếu quà tặng",
+        "id": "13744",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Sim số - Thẻ cào - Thẻ game",
+        "id": "the-ao-dien-thoai",
+        "parentId": "11312",
+        "parentName": "Voucher - Dịch vụ",
+        "baseId": 100013
+    },
+    {
+        "name": "Phụ kiện - Chăm sóc xe",
+        "id": "24832",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Xe điện",
+        "id": "6070",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Xe đạp",
+        "id": "8431",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Xe máy",
+        "id": "8597",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Ô tô",
+        "id": "8595",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Xe Scooter",
+        "id": "8435",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Dịch vụ, lắp đặt",
+        "id": "17208",
+        "parentId": "8594",
+        "parentName": "Ô Tô - Xe Máy - Xe Đạp",
+        "baseId": 100017
+    },
+    {
+        "name": "Sách tiếng Việt",
+        "id": "316",
+        "parentId": "8322",
+        "parentName": "Nhà Sách Tiki",
+        "baseId": 100018
+    },
+    {
+        "name": "Văn phòng phẩm",
+        "id": "7741",
+        "parentId": "8322",
+        "parentName": "Nhà Sách Tiki",
+        "baseId": 100018
+    },
+    {
+        "name": "Quà lưu niệm",
+        "id": "18328",
+        "parentId": "8322",
+        "parentName": "Nhà Sách Tiki",
+        "baseId": 100018
+    },
+    {
+        "name": "English Books",
+        "id": "320",
+        "parentId": "8322",
+        "parentName": "Nhà Sách Tiki",
+        "baseId": 100018
+    },
+    {
+        "name": "Âm thanh & Phụ kiện Tivi",
+        "id": "26568",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Phụ kiện điện lạnh",
+        "id": "8074",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Tủ lạnh",
+        "id": "2328",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Máy lạnh - Máy điều hòa",
+        "id": "3865",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Máy giặt",
+        "id": "3862",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Tủ đông - Tủ mát",
+        "id": "3868",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Tivi",
+        "id": "5015",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Máy nước nóng",
+        "id": "3866",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Máy rửa chén",
+        "id": "3864",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Máy sấy quần áo",
+        "id": "3863",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Tủ ướp rượu",
+        "id": "3869",
+        "parentId": "4221",
+        "parentName": "Điện Tử - Điện Lạnh",
+        "baseId": 10005
+    },
+    {
+        "name": "Trang phục thể thao nữ",
+        "id": "6141",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Trang phục thể thao nam",
+        "id": "6140",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Đồ dùng dã ngoại",
+        "id": "8428",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Giày thể thao nam",
+        "id": "6826",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Phụ kiện thể thao",
+        "id": "24306",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Dụng cụ - thiết bị tập thể thao",
+        "id": "24128",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Các môn thể thao khác",
+        "id": "24002",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Dụng cụ câu cá",
+        "id": "24294",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Thể thao dưới nước",
+        "id": "8413",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Các môn thể thao đồng đội",
+        "id": "4227",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Các môn thể thao chơi vợt",
+        "id": "8411",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Các môn thể thao đối kháng",
+        "id": "23120",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Giày thể thao nữ",
+        "id": "6827",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Thực phẩm bổ sung năng lượng",
+        "id": "10803",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Dụng cụ leo núi",
+        "id": "24258",
+        "parentId": "1975",
+        "parentName": "Thể Thao - Dã Ngoại",
+        "baseId": 10008
+    },
+    {
+        "name": "Phụ Kiện Máy Ảnh, Máy Quay",
+        "id": "1818",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Camera Giám Sát",
+        "id": "4077",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Thiết Bị Ánh Sáng",
+        "id": "28814",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Camera Hành Trình - Action Camera và Phụ Kiện",
+        "id": "28834",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Balo - Túi Đựng - Bao Da",
+        "id": "1840",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Ống Kính - Ống Ngắm",
+        "id": "28794",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Ống Kính (Lens)",
+        "id": "2757",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Thiết Bị Quay Phim",
+        "id": "28822",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Máy Bay Camera và Phụ Kiện",
+        "id": "8047",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    },
+    {
+        "name": "Máy Ảnh",
+        "id": "28806",
+        "parentId": "1801",
+        "parentName": "Máy Ảnh - Máy Quay Phim",
+        "baseId": 100014
+    }
+]

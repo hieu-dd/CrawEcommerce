@@ -5,7 +5,7 @@ import { dirname } from 'path';
 import { updateString } from '../util.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-export async function getCategories() {
+export function getCategories() {
     const categories = []
     const html = fs.readFileSync(__dirname + "/categories.html")
 
@@ -24,6 +24,7 @@ export async function getCategories() {
                     id,
                     parentId,
                     parentName,
+                    baseId: 0
                 })
             } else {
                 parentId = id
@@ -31,5 +32,9 @@ export async function getCategories() {
             }
         })
     })
+
+    fs.writeFile("categories.json",JSON.stringify(categories))
     return categories
 }
+
+getCategories()
