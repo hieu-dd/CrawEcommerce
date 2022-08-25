@@ -1,5 +1,6 @@
 import { database, credentials, dbCredentials } from './credentials.js'
 import pg from "pg";
+import { BASE_CATEGORIES } from './base_categories.js';
 const { Pool } = pg
 
 
@@ -60,23 +61,32 @@ async function createTables() {
     
       CONSTRAINT platforms__pk PRIMARY KEY (id)
     )`)
-    await databasePool.query(`CREATE TABLE products (
-      id SERIAL,
-      name text,
-      platform_id integer,
-      shop_id text,
-      description text,
-      url text,
-      brand text,
-      price float,
-      price_before_discount float,
-      created_at timestamp NOT NULL default now(),
-      updated_at timestamp NOT NULL default now(),
-      deleted_at timestamp,
-    
-      CONSTRAINT products__pk PRIMARY KEY (id),
-      CONSTRAINT products_platform_id__fk FOREIGN KEY (platform_id) REFERENCES platforms(id)
-    )`)
+    await databasePool.query(`CREATE TABLE "categories" (
+      "id" SERIAL PRIMARY KEY,
+      "name" text,
+      "parentid" int,
+      "created_at" timestamp NOT NULL DEFAULT (now()),
+      "updated_at" timestamp NOT NULL DEFAULT (now()),
+      "deleted_at" timestamp
+    );`)
+
+    await databasePool.query(`CREATE TABLE "products" (
+      "id" SERIAL PRIMARY KEY,
+      "name" text,
+      "platform_id" integer,
+      "category_id" integer,
+      "categories" text[],
+      "sku" text,
+      "shop_id" text,
+      "description" text,
+      "url" text,
+      "brand" text,
+      "price" float,
+      "price_before_discount" float,
+      "created_at" timestamp NOT NULL DEFAULT (now()),
+      "updated_at" timestamp NOT NULL DEFAULT (now()),
+      "deleted_at" timestamp
+    );`)
     await databasePool.query(`CREATE TABLE attibutes (
       id SERIAL,
       product_id integer,
@@ -100,7 +110,18 @@ async function createTables() {
       CONSTRAINT product_images__pk PRIMARY KEY (id),
       CONSTRAINT product_images_product_id__fk FOREIGN KEY (product_id) REFERENCES products(id)
     )`)
+
+    for (const catid in BASE_CATEGORIES) {
+      const name = BASE_CATEGORIES[catid]
+      let query = `INSERT INTO categories(id,name) VALUES($1,$2) RETURNING id;`
+      let values = [catid, name];
+      await databasePool.query(query, values)
+    }
+
+
     console.log(`Create tables success`)
+
+
     databasePool.end()
   } catch (e) {
     databasePool.end()

@@ -8,9 +8,10 @@ const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
 
-async function insertProduct(product) {
-    let query = `INSERT INTO products(name,platform_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;`
-    let values = [product.name, 1, null, product.description, product.short_url, null, product.price, product.original_price];
+async function insertProduct(product, category_id) {
+    console.log((category_id))
+    let query = `INSERT INTO products(name,platform_id,category_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING id;`
+    let values = [product.name, 1, category_id, null, product.description, product.short_url, null, product.price, product.original_price];
     try {
         const res = await pool.query(query, values)
         console.log("insert success: ", product.name)
@@ -43,7 +44,7 @@ export async function crawTiki() {
     console.log("Craw tiki start")
     let crawedCount = 0
     await insertPlatform(pool, 1, 'tiki')
-    const categories = await getCategories()
+    const categories = getCategories()
     console.log(categories)
     for (const cat of categories) {
         let page = 0;
@@ -65,7 +66,7 @@ export async function crawTiki() {
                 } else {
                     crawedCount++
                     console.log("Tiki crawed: ", crawedCount, "catid: ", catid, "page:", page)
-                    const id = await insertProduct(itemDetail)
+                    const id = await insertProduct(itemDetail, cat.baseId)
                     if (id) {
                         if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
                             await insertProductImages(id, itemDetail.images[0].base_url)
