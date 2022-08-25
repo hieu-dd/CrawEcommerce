@@ -4,7 +4,7 @@ import { insertPlatform } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
 import fs from 'fs-extra'
-import { getCategories } from "./category.js";
+import { getCategories } from "./categories.js";
 const { Pool } = pg
 
 let pool = new Pool(dbCredentials)
