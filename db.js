@@ -27,7 +27,7 @@ export async function prepareDb() {
           pg_tables
       WHERE 
           schemaname = 'public' AND 
-          tablename  = 'products'
+          tablename  = 'partner_products'
       );`)
     console.log(checkTables)
     if (!checkTables || !checkTables.rows || !checkTables.rows[0] || !checkTables.rows[0].exists) {
@@ -97,7 +97,7 @@ async function createTables() {
       deleted_at timestamp,
     
       CONSTRAINT attibutes__pk PRIMARY KEY (id),
-      CONSTRAINT attibutes_product_id__fk FOREIGN KEY (product_id) REFERENCES products(id)
+      CONSTRAINT attibutes_product_id__fk FOREIGN KEY (product_id) REFERENCES partner_products(id)
     )`)
     await databasePool.query(`CREATE TABLE product_images (
       id SERIAL,
@@ -108,7 +108,7 @@ async function createTables() {
       deleted_at timestamp,
     
       CONSTRAINT product_images__pk PRIMARY KEY (id),
-      CONSTRAINT product_images_product_id__fk FOREIGN KEY (product_id) REFERENCES products(id)
+      CONSTRAINT product_images_product_id__fk FOREIGN KEY (product_id) REFERENCES partner_products(id)
     )`)
 
     for (const catid in BASE_CATEGORIES) {
