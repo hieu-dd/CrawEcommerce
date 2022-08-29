@@ -6,6 +6,7 @@
         "node-fetch": "^3.2.9",
         "parse5": "^7.0.0",
         "pg": "^8.7.3",
+        "puppeteer": "^16.2.0",
         "request-promise": "^4.2.6"
     }
 }

@@ -10,8 +10,8 @@ let pool = new Pool(dbCredentials)
 
 async function insertProduct(product, category_id) {
     console.log((category_id))
-    let query = `INSERT INTO products(name,platform_id,category_id,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING id;`
-    let values = [product.name, 1, category_id, null, product.description, product.short_url, null, product.price, product.original_price];
+    let query = `INSERT INTO partner_products(name,platform_id,category_id,sku,shop_id,description,url,brand,price,price_before_discount) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING id;`
+    let values = [product.name, 1, category_id, product.id, null, product.description, product.short_url, null, product.price, product.original_price];
     try {
         const res = await pool.query(query, values)
         console.log("insert success: ", product.name)

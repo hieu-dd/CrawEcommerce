@@ -70,7 +70,7 @@ async function createTables() {
       "deleted_at" timestamp
     );`)
 
-    await databasePool.query(`CREATE TABLE "products" (
+    await databasePool.query(`CREATE TABLE "partner_products" (
       "id" SERIAL PRIMARY KEY,
       "name" text,
       "platform_id" integer,
