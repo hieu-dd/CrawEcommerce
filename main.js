@@ -9,9 +9,9 @@ async function main() {
         await prepareDb()
         switch (platform) {
             case 'all':
-                await crawTiki()
-                await crawLazada()
-                await crawShopee()
+                crawTiki()
+                crawLazada()
+                crawShopee()
                 break;
             case 'tiki':
                 await crawTiki()
