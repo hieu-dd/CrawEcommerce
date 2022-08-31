@@ -138,3 +138,12 @@ export async function insertPlatform(pool, id, name) {
     console.log(`Insert platform ${name} err`)
   }
 }
+
+export async function checkProductExits(pool, sku) {
+  try {
+    const res = await pool.query(`select exists(select 1 from partner_products where sku='${sku}')`)
+    return res && res.rows && res.rows[0] && res.rows[0].exists ? res.rows[0].exists : false
+  } catch (e) {
+    return false
+  }
+}

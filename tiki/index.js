@@ -1,6 +1,6 @@
 import fetch from "node-fetch"
 import pg from "pg";
-import { insertPlatform } from "../db.js";
+import { insertPlatform, checkProductExits } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
 import { getCategories } from "./categories.js";
@@ -47,6 +47,10 @@ export async function crawTiki() {
     const categories = getCategories()
     console.log(categories)
     for (const cat of categories) {
+        if (cat.baseId != 100019) { // TODO : remove
+            continue
+        }
+
         let page = 0;
         let catid = cat.id
         if (catid <= 0) {
@@ -56,9 +60,12 @@ export async function crawTiki() {
         while (hasMore) {
             const listingsResponse = await getListings(catid, page)
             if (!listingsResponse || !listingsResponse.data) {
+                hasMore = false
                 continue
             }
             for (const item of listingsResponse.data) {
+                const exists = await checkProductExits(pool, item.id)
+                if(exists) continue
                 await sleep(250);
                 const itemDetail = await getDetail(item.id)
                 if (itemDetail.errors) {

@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import pg from "pg";
-import { insertPlatform } from "../db.js";
+import { insertPlatform, checkProductExits } from "../db.js";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
 import fs from 'fs-extra'
@@ -23,6 +23,10 @@ export async function crawShopee() {
     await insertPlatform(pool, 2, 'shopee')
     const categories = await getCategories()
     for (const cat of categories) {
+
+        if (cat.baseId != 100019) { // TODO : remove
+            continue
+        }
         let page = 0;
         let catid = cat.id
         if (catid <= 0) {
@@ -39,8 +43,11 @@ export async function crawShopee() {
                 continue
             }
             for (const item of sections.data.item) {
+                const exists = await checkProductExits(pool, item.itemid)
+                if (exists) continue
                 let failedTime = 0
                 while (failedTime < 5) {
+
                     await sleep(2000);
                     const data = await getDetail(item.itemid, item.shopid)
                     if (data.error && data.error == LIMIT_ERR) {

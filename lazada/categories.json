@@ -1,0 +1,692 @@
+[
+    {
+        "name": "Laptops",
+        "id": "laptop",
+        "url": "www.lazada.vn/laptop/",
+        "baseId": 100012
+    },
+    {
+        "name": "Desktops Computers",
+        "id": "may-tinh-de-ban-va-phu-kien",
+        "url": "www.lazada.vn/may-tinh-de-ban-va-phu-kien/",
+        "baseId": 100012
+    },
+    {
+        "name": "Audio",
+        "id": "am-thanh",
+        "url": "www.lazada.vn/am-thanh/",
+        "baseId": 10005
+    },
+    {
+        "name": "Security Cameras & Systems",
+        "id": "camera-giam-sat-2",
+        "url": "www.lazada.vn/camera-giam-sat-2/",
+        "baseId": 10005
+    },
+    {
+        "name": "Cameras & Drones",
+        "id": "may-anh-may-quay-phim",
+        "url": "www.lazada.vn/may-anh-may-quay-phim/",
+        "baseId": 100014
+    },
+    {
+        "name": "Video & Action Camcorder",
+        "id": "may-quay-phim",
+        "url": "www.lazada.vn/may-quay-phim/",
+        "baseId": 100014
+    },
+    {
+        "name": "Printers",
+        "id": "man-hinh-may-in",
+        "url": "www.lazada.vn/man-hinh-may-in/",
+        "baseId": 0
+    },
+    {
+        "name": "Smartwatches",
+        "id": "dong-ho-thong-minh",
+        "url": "www.lazada.vn/dong-ho-thong-minh/",
+        "baseId": 100019
+    },
+    {
+        "name": "Console Gaming",
+        "id": "dieu-khien-choi-game",
+        "url": "www.lazada.vn/dieu-khien-choi-game/",
+        "baseId": 0
+    },
+    {
+        "name": "Mobile Accessories",
+        "id": "phu-kien-dien-thoai-may-tinh-bang",
+        "url": "www.lazada.vn/phu-kien-dien-thoai-may-tinh-bang/",
+        "baseId": 0
+    },
+    {
+        "name": "Smart Devices",
+        "id": "thiet-bi-thong-minh",
+        "url": "www.lazada.vn/thiet-bi-thong-minh/",
+        "baseId": 0
+    },
+    {
+        "name": "Gadgets",
+        "id": "thiet-bi-so",
+        "url": "www.lazada.vn/thiet-bi-so/",
+        "baseId": 0
+    },
+    {
+        "name": "Camera Accessories",
+        "id": "phu-kien-may-anh-may-quay-phim",
+        "url": "www.lazada.vn/phu-kien-may-anh-may-quay-phim/",
+        "baseId": 0
+    },
+    {
+        "name": "Drone Accessories",
+        "id": "phu-kien-may-bay-camera",
+        "url": "www.lazada.vn/phu-kien-may-bay-camera/",
+        "baseId": 0
+    },
+    {
+        "name": "Data Storage",
+        "id": "thiet-bi-luu-tru-2",
+        "url": "www.lazada.vn/thiet-bi-luu-tru-2/",
+        "baseId": 0
+    },
+    {
+        "name": "Computer Accessories",
+        "id": "phu-kien-may-vi-tinh",
+        "url": "www.lazada.vn/phu-kien-may-vi-tinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Computer Components",
+        "id": "linh-kien-may-tinh",
+        "url": "www.lazada.vn/linh-kien-may-tinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Lens Accessories",
+        "id": "phu-kien-ong-kinh",
+        "url": "www.lazada.vn/phu-kien-ong-kinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Network Components",
+        "id": "thiet-bi-mang",
+        "url": "www.lazada.vn/thiet-bi-mang/",
+        "baseId": 0
+    },
+    {
+        "name": "Console Gaming Accessories",
+        "id": "phu-kien-may-choi-game",
+        "url": "www.lazada.vn/phu-kien-may-choi-game/",
+        "baseId": 0
+    },
+    {
+        "name": "Televisions & Videos",
+        "id": "tv-video-am-thanh-thiet-bi-deo-cong-nghe",
+        "url": "www.lazada.vn/tv-video-am-thanh-thiet-bi-deo-cong-nghe/",
+        "baseId": 0
+    },
+    {
+        "name": "Small Appliances",
+        "id": "do-gia-dung-nho",
+        "url": "www.lazada.vn/do-gia-dung-nho/",
+        "baseId": 0
+    },
+    {
+        "name": "Large Appliances",
+        "id": "do-gia-dung-lon",
+        "url": "www.lazada.vn/do-gia-dung-lon/",
+        "baseId": 0
+    },
+    {
+        "name": "Skincare",
+        "id": "cham-soc-da-mat",
+        "url": "www.lazada.vn/cham-soc-da-mat/",
+        "baseId": 0
+    },
+    {
+        "name": "Make-Up",
+        "id": "trang-diem",
+        "url": "www.lazada.vn/trang-diem/",
+        "baseId": 0
+    },
+    {
+        "name": "Beauty Tools",
+        "id": "dung-cu-cham-soc-sac-dep",
+        "url": "www.lazada.vn/dung-cu-cham-soc-sac-dep/",
+        "baseId": 0
+    },
+    {
+        "name": "Bath & Body",
+        "id": "san-pham-tam-cham-soc-co-the",
+        "url": "www.lazada.vn/san-pham-tam-cham-soc-co-the/",
+        "baseId": 0
+    },
+    {
+        "name": "Hair Care",
+        "id": "san-pham-cham-soc-toc",
+        "url": "www.lazada.vn/san-pham-cham-soc-toc/",
+        "baseId": 0
+    },
+    {
+        "name": "Personal Care",
+        "id": "cham-soc-ca-nhan",
+        "url": "www.lazada.vn/cham-soc-ca-nhan/",
+        "baseId": 0
+    },
+    {
+        "name": "Men's Care",
+        "id": "cham-soc-cho-nam-gioi",
+        "url": "www.lazada.vn/cham-soc-cho-nam-gioi/",
+        "baseId": 0
+    },
+    {
+        "name": "Fragrances",
+        "id": "nuoc-hoa",
+        "url": "www.lazada.vn/nuoc-hoa/",
+        "baseId": 0
+    },
+    {
+        "name": "Food Supplements",
+        "id": "thuc-pham-bo-sung",
+        "url": "www.lazada.vn/thuc-pham-bo-sung/",
+        "baseId": 0
+    },
+    {
+        "name": "Beauty Supplements",
+        "id": "thuc-pham-cho-sac-dep",
+        "url": "www.lazada.vn/thuc-pham-cho-sac-dep/",
+        "baseId": 0
+    },
+    {
+        "name": "Sexual Wellness",
+        "id": "ho-tro-tinh-duc",
+        "url": "www.lazada.vn/ho-tro-tinh-duc/",
+        "baseId": 0
+    },
+    {
+        "name": "Medical Supplies",
+        "id": "thiet-bi-y-te",
+        "url": "www.lazada.vn/thiet-bi-y-te/",
+        "baseId": 0
+    },
+    {
+        "name": "Diapering & Potty",
+        "id": "ta-dung-cu-ve-sinh",
+        "url": "www.lazada.vn/ta-dung-cu-ve-sinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Milk Formula & Baby Food",
+        "id": "sua-cong-thuc-bot-an-dam",
+        "url": "www.lazada.vn/sua-cong-thuc-bot-an-dam/",
+        "baseId": 0
+    },
+    {
+        "name": "Baby Fashion & Accessories",
+        "id": "quan-ao-phu-kien-cho-be",
+        "url": "www.lazada.vn/quan-ao-phu-kien-cho-be/",
+        "baseId": 0
+    },
+    {
+        "name": "Feeding Essentials",
+        "id": "do-dung-bu-sua-an-dam",
+        "url": "www.lazada.vn/do-dung-bu-sua-an-dam/",
+        "baseId": 0
+    },
+    {
+        "name": "Baby Gear",
+        "id": "xe-ghe-em-be",
+        "url": "www.lazada.vn/xe-ghe-em-be/",
+        "baseId": 0
+    },
+    {
+        "name": "Nursery",
+        "id": "cham-soc-tre-so-sinh-tre-nho",
+        "url": "www.lazada.vn/cham-soc-tre-so-sinh-tre-nho/",
+        "baseId": 0
+    },
+    {
+        "name": "Baby Personal Care",
+        "id": "tam-cham-soc-co-the-tre-so-sinh",
+        "url": "www.lazada.vn/tam-cham-soc-co-the-tre-so-sinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Toys & Games",
+        "id": "do-choi-tro-choi",
+        "url": "www.lazada.vn/do-choi-tro-choi/",
+        "baseId": 0
+    },
+    {
+        "name": "Electronic & Remote Control Toys",
+        "id": "xe-mo-hinh-tro-choi-dieu-khien-tu-xa",
+        "url": "www.lazada.vn/xe-mo-hinh-tro-choi-dieu-khien-tu-xa/",
+        "baseId": 0
+    },
+    {
+        "name": "Sports Toys & Outdoor Play",
+        "id": "the-thao-tro-choi-ngoai-troi",
+        "url": "www.lazada.vn/the-thao-tro-choi-ngoai-troi/",
+        "baseId": 0
+    },
+    {
+        "name": "Baby & Toddler Toys",
+        "id": "do-choi-cho-tre-so-sinh-chap-chung",
+        "url": "www.lazada.vn/do-choi-cho-tre-so-sinh-chap-chung/",
+        "baseId": 0
+    },
+    {
+        "name": "Learning & Education",
+        "id": "do-choi-giao-duc-tre-em",
+        "url": "www.lazada.vn/do-choi-giao-duc-tre-em/",
+        "baseId": 0
+    },
+    {
+        "name": "UHT, Milk & Milk Powder",
+        "id": "bach-hoa-online-sua-uht-tiet-trung-sua-bot",
+        "url": "www.lazada.vn/bach-hoa-online-sua-uht-tiet-trung-sua-bot/",
+        "baseId": 0
+    },
+    {
+        "name": "Beverages & Beer, Wine, Spirits",
+        "id": "cac-loai-do-uong",
+        "url": "www.lazada.vn/cac-loai-do-uong/",
+        "baseId": 0
+    },
+    {
+        "name": "Dairy & Chilled",
+        "id": "shop-Thuc-pham-tu-sua-do-lanh",
+        "url": "www.lazada.vn/shop-Thuc-pham-tu-sua-do-lanh/",
+        "baseId": 0
+    },
+    {
+        "name": "Canned & Dried Goods",
+        "id": "shop-do-hop",
+        "url": "www.lazada.vn/shop-do-hop/",
+        "baseId": 0
+    },
+    {
+        "name": "Candy & Chocolate & Snacks",
+        "id": "shop-So-co-la-Snack-Keo",
+        "url": "www.lazada.vn/shop-So-co-la-Snack-Keo/",
+        "baseId": 0
+    },
+    {
+        "name": "Food Staples & Cooking Essentials",
+        "id": "shop-Nguyen-lieu-nau-an-lam-banh",
+        "url": "www.lazada.vn/shop-Nguyen-lieu-nau-an-lam-banh/",
+        "baseId": 0
+    },
+    {
+        "name": "Cleaning Supplies & Paper Tissues",
+        "id": "bach-hoa-online-chat-lau-chui-nha-cua",
+        "url": "www.lazada.vn/bach-hoa-online-chat-lau-chui-nha-cua/",
+        "baseId": 0
+    },
+    {
+        "name": "Dishwashing & Kitchen Supplies",
+        "id": "bach-hoa-online-muong-nia-nhua",
+        "url": "www.lazada.vn/bach-hoa-online-muong-nia-nhua/",
+        "baseId": 0
+    },
+    {
+        "name": "Laundry Supplies",
+        "id": "bach-hoa-online-giat-ui",
+        "url": "www.lazada.vn/bach-hoa-online-giat-ui/",
+        "baseId": 0
+    },
+    {
+        "name": "Pet Accessories",
+        "id": "phu-kien-cho-thu-cung",
+        "url": "www.lazada.vn/phu-kien-cho-thu-cung/",
+        "baseId": 0
+    },
+    {
+        "name": "Pet Food & pet healthcare",
+        "id": "thuc-an-thu-cung",
+        "url": "www.lazada.vn/thuc-an-thu-cung/",
+        "baseId": 0
+    },
+    {
+        "name": "Fruit & Vegetables",
+        "id": "shop-rau-cu-qua",
+        "url": "www.lazada.vn/shop-rau-cu-qua/",
+        "baseId": 0
+    },
+    {
+        "name": "Kitchen & Dining",
+        "id": "do-dung-bep-phong-an",
+        "url": "www.lazada.vn/do-dung-bep-phong-an/",
+        "baseId": 0
+    },
+    {
+        "name": "Tools, DIY & Outdoor",
+        "id": "tan-trang-nha-cua",
+        "url": "www.lazada.vn/tan-trang-nha-cua/",
+        "baseId": 0
+    },
+    {
+        "name": "Power Tools",
+        "id": "dung-cu-dien",
+        "url": "www.lazada.vn/dung-cu-dien/",
+        "baseId": 0
+    },
+    {
+        "name": "Hand Tools",
+        "id": "dung-cu-cam-tay-da-nang",
+        "url": "www.lazada.vn/dung-cu-cam-tay-da-nang/",
+        "baseId": 0
+    },
+    {
+        "name": "Bedding",
+        "id": "do-dung-phong-ngu-gia-dinh",
+        "url": "www.lazada.vn/do-dung-phong-ngu-gia-dinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Bath",
+        "id": "do-dung-phu-kien-phong-tam",
+        "url": "www.lazada.vn/do-dung-phu-kien-phong-tam/",
+        "baseId": 0
+    },
+    {
+        "name": "Lighting",
+        "id": "cac-loai-den",
+        "url": "www.lazada.vn/cac-loai-den/",
+        "baseId": 0
+    },
+    {
+        "name": "Home Décor",
+        "id": "san-pham-trang-tri-nha-cua",
+        "url": "www.lazada.vn/san-pham-trang-tri-nha-cua/",
+        "baseId": 0
+    },
+    {
+        "name": "Furniture",
+        "id": "san-pham-noi-that",
+        "url": "www.lazada.vn/san-pham-noi-that/",
+        "baseId": 0
+    },
+    {
+        "name": "Stationery & Craft",
+        "id": "van-phong-pham-va-nghe-thu-cong",
+        "url": "www.lazada.vn/van-phong-pham-va-nghe-thu-cong/",
+        "baseId": 0
+    },
+    {
+        "name": "Media, Music & Books",
+        "id": "truyen-thong-am-nhac-sach",
+        "url": "www.lazada.vn/truyen-thong-am-nhac-sach/",
+        "baseId": 0
+    },
+    {
+        "name": "Laundry & Cleaning",
+        "id": "dung-cu-ve-sinh-2",
+        "url": "www.lazada.vn/dung-cu-ve-sinh-2/",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Clothing",
+        "id": "trang-phuc-nu",
+        "url": "www.lazada.vn//trang-phuc-nu",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Shoes",
+        "id": "giay-nu-thoi-trang",
+        "url": "www.lazada.vn/giay-nu-thoi-trang/",
+        "baseId": 0
+    },
+    {
+        "name": "Lingerie, Sleep & Lounge",
+        "id": "do-ngu-noi-y",
+        "url": "www.lazada.vn/do-ngu-noi-y/",
+        "baseId": 0
+    },
+    {
+        "name": "Accessories",
+        "id": "phu-kien-cho-nu",
+        "url": "www.lazada.vn/phu-kien-cho-nu/",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Bags",
+        "id": "tui-cho-nu",
+        "url": "www.lazada.vn/tui-cho-nu/",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Jewellery",
+        "id": "trang-suc-nu",
+        "url": "www.lazada.vn/trang-suc-nu/",
+        "baseId": 100019
+    },
+    {
+        "name": "Women's Watches",
+        "id": "dong-ho-nu-thoi-trang",
+        "url": "www.lazada.vn/dong-ho-nu-thoi-trang/",
+        "baseId": 100019
+    },
+    {
+        "name": "Men's Clothing",
+        "id": "trang-phuc-nam",
+        "url": "www.lazada.vn/trang-phuc-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Men's Shoes",
+        "id": "giay-nam-thoi-trang",
+        "url": "www.lazada.vn/giay-nam-thoi-trang/",
+        "baseId": 0
+    },
+    {
+        "name": "Underwear",
+        "id": "do-lot-nam",
+        "url": "www.lazada.vn/do-lot-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Accessories",
+        "id": "phu-kien-thoi-trang-nam",
+        "url": "www.lazada.vn/phu-kien-thoi-trang-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Men's Bags",
+        "id": "tui-nam",
+        "url": "www.lazada.vn/tui-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Men's Jewellery",
+        "id": "trang-suc-nam",
+        "url": "www.lazada.vn/trang-suc-nam/",
+        "baseId": 100019
+    },
+    {
+        "name": "Men's Watches",
+        "id": "dong-ho-nam-gioi",
+        "url": "www.lazada.vn/dong-ho-nam-gioi/",
+        "baseId": 100019
+    },
+    {
+        "name": "Boys' Clothing",
+        "id": "trang-phuc-cua-be-trai",
+        "url": "www.lazada.vn/trang-phuc-cua-be-trai/",
+        "baseId": 0
+    },
+    {
+        "name": "Boys' Shoes",
+        "id": "thoi-trang-giay-cho-be-trai",
+        "url": "www.lazada.vn/thoi-trang-giay-cho-be-trai/",
+        "baseId": 0
+    },
+    {
+        "name": "Girls' Clothing",
+        "id": "trang-phuc-cua-be-gai",
+        "url": "www.lazada.vn/trang-phuc-cua-be-gai/",
+        "baseId": 0
+    },
+    {
+        "name": "Girls' Shoes",
+        "id": "thoi-trang-giay-danh-cho-be-gai",
+        "url": "www.lazada.vn/thoi-trang-giay-danh-cho-be-gai/",
+        "baseId": 0
+    },
+    {
+        "name": "Kids' Bags",
+        "id": "tui-danh-cho-tre-em",
+        "url": "www.lazada.vn/tui-danh-cho-tre-em/",
+        "baseId": 0
+    },
+    {
+        "name": "Kids' Watches",
+        "id": "dong-ho-danh-cho-tre-em",
+        "url": "www.lazada.vn/dong-ho-danh-cho-tre-em",
+        "baseId": 100019
+    },
+    {
+        "name": "Men's Sports Shoes",
+        "id": "do-the-thao-nam",
+        "url": "www.lazada.vn/do-the-thao-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Men's Apparel",
+        "id": "quan-ao-the-thao-cho-nam",
+        "url": "www.lazada.vn/quan-ao-the-thao-cho-nam/",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Sports Shoes",
+        "id": "do-the-thao-nu",
+        "url": "www.lazada.vn/do-the-thao-nu/",
+        "baseId": 0
+    },
+    {
+        "name": "Women's Apparel",
+        "id": "quan-ao-the-thao-cho-nu",
+        "url": "www.lazada.vn/quan-ao-the-thao-cho-nu/",
+        "baseId": 0
+    },
+    {
+        "name": "Travel",
+        "id": "vali-ba-lo-tui-du-lich-2",
+        "url": "www.lazada.vn/vali-ba-lo-tui-du-lich-2/",
+        "baseId": 0
+    },
+    {
+        "name": "Outdoor Recreation",
+        "id": "hoat-dong-da-ngoai",
+        "url": "www.lazada.vn/hoat-dong-da-ngoai/",
+        "baseId": 0
+    },
+    {
+        "name": "Exercise & Fitness",
+        "id": "dung-cu-de-tap-the-hinh",
+        "url": "www.lazada.vn/dung-cu-de-tap-the-hinh/",
+        "baseId": 0
+    },
+    {
+        "name": "Racket Sports",
+        "id": "cac-mon-the-thao-vot",
+        "url": "www.lazada.vn/cac-mon-the-thao-vot/",
+        "baseId": 0
+    },
+    {
+        "name": "Team Sports",
+        "id": "cac-mon-tap-luyen-doi-khang",
+        "url": "www.lazada.vn/cac-mon-tap-luyen-doi-khang/",
+        "baseId": 0
+    },
+    {
+        "name": "Boxing & Martial Arts",
+        "id": "dam-boc-vo-thuat-danh-mma",
+        "url": "www.lazada.vn/dam-boc-vo-thuat-danh-mma/",
+        "baseId": 0
+    },
+    {
+        "name": "Water Sports",
+        "id": "cac-mon-the-thao-duoi-nuoc",
+        "url": "www.lazada.vn/cac-mon-the-thao-duoi-nuoc/",
+        "baseId": 0
+    },
+    {
+        "name": "Sports Accessories",
+        "id": "phu-kien-the-thao",
+        "url": "www.lazada.vn/phu-kien-the-thao/",
+        "baseId": 0
+    },
+    {
+        "name": "Motorcycles & Scooters",
+        "id": "xe-mo-to-xe-tay-ga",
+        "url": "www.lazada.vn/xe-mo-to-xe-tay-ga/",
+        "baseId": 0
+    },
+    {
+        "name": "Car Care",
+        "id": "cham-soc-o-to",
+        "url": "www.lazada.vn/cham-soc-o-to/",
+        "baseId": 0
+    },
+    {
+        "name": "Interior Accessories",
+        "id": "phu-kien-trong-o-to-xe-may",
+        "url": "www.lazada.vn/phu-kien-trong-o-to-xe-may/",
+        "baseId": 0
+    },
+    {
+        "name": "Exterior Accessories",
+        "id": "phu-kien-ngoai-o-to-xe-may",
+        "url": "www.lazada.vn/phu-kien-ngoai-o-to-xe-may/",
+        "baseId": 0
+    },
+    {
+        "name": "Parts & Spares",
+        "id": "bo-phan-phu-tung-thay-the-cho-xe",
+        "url": "www.lazada.vn/bo-phan-phu-tung-thay-the-cho-xe/",
+        "baseId": 0
+    },
+    {
+        "name": "Electronics",
+        "id": "hang-dien-tu-2",
+        "url": "www.lazada.vn/hang-dien-tu-2/",
+        "baseId": 0
+    },
+    {
+        "name": "Oils & Fluids",
+        "id": "dau-nhot-o-to-xe-may",
+        "url": "www.lazada.vn/dau-nhot-o-to-xe-may/",
+        "baseId": 0
+    },
+    {
+        "name": "Moto Parts & Spares",
+        "id": "bo-phan-mo-to-phu-tung-thay-the-cho-mo-to",
+        "url": "www.lazada.vn/bo-phan-mo-to-phu-tung-thay-the-cho-mo-to/",
+        "baseId": 0
+    },
+    {
+        "name": "Riding Gear",
+        "id": "do-bao-ho-mo-to",
+        "url": "www.lazada.vn/do-bao-ho-mo-to/",
+        "baseId": 0
+    },
+    {
+        "name": "Moto Accessories",
+        "id": "phu-kien-gan-ngoai-mo-to",
+        "url": "www.lazada.vn/phu-kien-gan-ngoai-mo-to/",
+        "baseId": 0
+    },
+    {
+        "name": "Moto Oils & Fluids",
+        "id": "dau-nhot-mo-to",
+        "url": "www.lazada.vn/dau-nhot-mo-to/",
+        "baseId": 0
+    },
+    {
+        "name": "Moto Tires & Wheels",
+        "id": "banh-xe-lop-xe-may",
+        "url": "www.lazada.vn/banh-xe-lop-xe-may/",
+        "baseId": 0
+    }
+]
