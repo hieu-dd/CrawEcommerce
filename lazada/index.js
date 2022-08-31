@@ -5,8 +5,6 @@ import { startBrowser } from '../browser/browser.js';
 import fetch from "node-fetch"
 import pg from "pg";
 import { dbCredentials } from '../credentials.js'
-import { sleep } from "../util.js";
-import { toArray } from 'cheerio/lib/api/traversing.js';
 
 const { Pool } = pg
 
