@@ -43,47 +43,51 @@ export async function crawShopee() {
                 continue
             }
             for (const item of sections.data.item) {
-                const exists = await checkProductExits(pool, item.itemid)
-                if (exists) continue
-                let failedTime = 0
-                while (failedTime < 5) {
+                try {
+                    const exists = await checkProductExits(pool, item.itemid)
+                    if (exists) continue
+                    let failedTime = 0
+                    while (failedTime < 5) {
 
-                    await sleep(2000);
-                    const data = await getDetail(item.itemid, item.shopid)
-                    if (data.error && data.error == LIMIT_ERR) {
-                        crawedErr++
-                        if (!errTime.start) {
-                            errTime.start = new Date().getTime()
+                        await sleep(2000);
+                        const data = await getDetail(item.itemid, item.shopid)
+                        if (data.error && data.error == LIMIT_ERR) {
+                            crawedErr++
+                            if (!errTime.start) {
+                                errTime.start = new Date().getTime()
+                            }
+                            console.log("Err limit: ", data)
+                            await sleep(60000 * (failedTime ? 2 : 8))
+                            failedTime++
+                        } else if (data.error) {
+                            failedTime++
+                            console.log("Err: ", data)
+                            continue
                         }
-                        console.log("Err limit: ", data)
-                        await sleep(60000 * (failedTime ? 2 : 8))
-                        failedTime++
-                    } else if (data.error) {
-                        failedTime++
-                        console.log("Err: ", data)
-                        continue
+                        else {
+                            if (errTime.start) {
+                                errTime.end = new Date().getTime()
+                                times.push(errTime)
+                                errTime = {}
+                            }
+                            const itemDetail = data.data
+                            crawedCount++
+                            console.log("Shopee crawed: ", crawedCount, "catid: ", catid, "page:", page)
+                            const id = await insertProduct(itemDetail, cat.baseId)
+                            if (id) {
+                                item.images && itemDetail.images.forEach(async (image) => {
+                                    const url = `${base_file_url}${image}`
+                                    await insertProductImages(id, url)
+                                });
+                                itemDetail.attributes && itemDetail.attributes.forEach(async (attr) => {
+                                    await insertAttributes(attr, id)
+                                });
+                            }
+                            break
+                        }
                     }
-                    else {
-                        if (errTime.start) {
-                            errTime.end = new Date().getTime()
-                            times.push(errTime)
-                            errTime = {}
-                        }
-                        const itemDetail = data.data
-                        crawedCount++
-                        console.log("Shopee crawed: ", crawedCount, "catid: ", catid, "page:", page)
-                        const id = await insertProduct(itemDetail, cat.baseId)
-                        if (id) {
-                            item.images && itemDetail.images.forEach(async (image) => {
-                                const url = `${base_file_url}${image}`
-                                await insertProductImages(id, url)
-                            });
-                            itemDetail.attributes && itemDetail.attributes.forEach(async (attr) => {
-                                await insertAttributes(attr, id)
-                            });
-                        }
-                        break
-                    }
+                } catch (e) {
+                    console.log(e)
                 }
             }
 

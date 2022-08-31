@@ -64,25 +64,29 @@ export async function crawTiki() {
                 continue
             }
             for (const item of listingsResponse.data) {
-                const exists = await checkProductExits(pool, item.id)
-                if(exists) continue
-                await sleep(250);
-                const itemDetail = await getDetail(item.id)
-                if (itemDetail.errors) {
-                    console.log("Fetch err:", itemDetail.errors)
-                } else {
-                    crawedCount++
-                    console.log("Tiki crawed: ", crawedCount, "catid: ", catid, "page:", page)
-                    const id = await insertProduct(itemDetail, cat.baseId)
-                    if (id) {
-                        if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
-                            await insertProductImages(id, itemDetail.images[0].base_url)
+                try {
+                    const exists = await checkProductExits(pool, item.id)
+                    if (exists) continue
+                    await sleep(250);
+                    const itemDetail = await getDetail(item.id)
+                    if (itemDetail.errors) {
+                        console.log("Fetch err:", itemDetail.errors)
+                    } else {
+                        crawedCount++
+                        console.log("Tiki crawed: ", crawedCount, "catid: ", catid, "page:", page)
+                        const id = await insertProduct(itemDetail, cat.baseId)
+                        if (id) {
+                            if (itemDetail.images && itemDetail.images[0] && itemDetail.images[0].base_url) {
+                                await insertProductImages(id, itemDetail.images[0].base_url)
+                            }
+                            let attributes = itemDetail.specifications.flatMap(e => e.attributes);
+                            attributes.forEach(async (attr) => {
+                                await insertAttributes(attr, id)
+                            });
                         }
-                        let attributes = itemDetail.specifications.flatMap(e => e.attributes);
-                        attributes.forEach(async (attr) => {
-                            await insertAttributes(attr, id)
-                        });
                     }
+                } catch (e) {
+                    console.log(e)
                 }
             }
             hasMore = listingsResponse.data.length > 0

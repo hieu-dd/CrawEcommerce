@@ -6,6 +6,7 @@ import fetch from "node-fetch"
 import pg from "pg";
 import { dbCredentials } from '../credentials.js'
 import { sleep } from "../util.js";
+import { toArray } from 'cheerio/lib/api/traversing.js';
 
 const { Pool } = pg
 
@@ -31,26 +32,30 @@ export async function crawLazada() {
                 continue
             }
             for (const item of listingsResponse.mods.listItems) {
-                const exists = await checkProductExits(pool, item.itemId)
-                console.log(exists)
-                if (exists) continue
-                let description
-                if (item.description && item.description.length) {
-                    description = item.description.join(', ')
-                    console.log(1)
-                } else {
-                    description = await crawDetail(webPage, `https:${item.itemUrl}`)
-                    console.log(2)
-                }
-                const id = await insertProduct(item, cat.baseId, description.trim())
-                console.log(3)
-                crawedCount++
-                if (id) {
-                    const images = [...item.thumbs.map(e => e.image), item.image]
-                    images.forEach(async (img) => {
-                        console.log(4)
-                        await insertProductImages(id, img)
-                    });
+                try {
+                    const exists = await checkProductExits(pool, item.itemId)
+                    console.log(exists)
+                    if (exists) continue
+                    let description
+                    if (item.description && item.description.length) {
+                        description = item.description.join(', ')
+                        console.log(1)
+                    } else {
+                        description = await crawDetail(webPage, `https:${item.itemUrl}`)
+                        console.log(2)
+                    }
+                    const id = await insertProduct(item, cat.baseId, description.trim())
+                    console.log(3)
+                    crawedCount++
+                    if (id) {
+                        const images = [...item.thumbs.map(e => e.image), item.image]
+                        images.forEach(async (img) => {
+                            console.log(4)
+                            await insertProductImages(id, img)
+                        });
+                    }
+                } catch (e) {
+                    console.log(e)
                 }
             }
             hasMore = listingsResponse.mods.listItems.length > 0
