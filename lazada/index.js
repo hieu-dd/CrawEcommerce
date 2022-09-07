@@ -14,6 +14,16 @@ export async function crawLazada() {
     console.log("Craw lazada start")
     const browser = await startBrowser();
     let webPage = await browser.newPage();
+    await webPage.setViewport({ width: 1920, height: 1080 });
+    await webPage.setRequestInterception(true);
+    webPage.on('request', (req) => {
+        if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() === 'image' || req.url().includes('png') || req.url().includes('jpg')) {
+            req.abort();
+        }
+        else {
+            req.continue();
+        }
+    });
     let crawedCount = 0
     await insertPlatform(pool, 3, 'lazada')
     const categories = getCategories()
