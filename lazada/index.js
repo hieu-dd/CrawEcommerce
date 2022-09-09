@@ -12,18 +12,6 @@ let pool = new Pool(dbCredentials)
 
 export async function crawLazada() {
     console.log("Craw lazada start")
-    const browser = await startBrowser();
-    let webPage = await browser.newPage();
-    await webPage.setViewport({ width: 1920, height: 1080 });
-    await webPage.setRequestInterception(true);
-    webPage.on('request', (req) => {
-        if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() === 'image' || req.url().includes('png') || req.url().includes('jpg')) {
-            req.abort();
-        }
-        else {
-            req.continue();
-        }
-    });
     let crawedCount = 0
     await insertPlatform(pool, 3, 'lazada')
     const categories = getCategories()
@@ -49,7 +37,7 @@ export async function crawLazada() {
                         description = item.description.join(', ')
                         console.log(1)
                     } else {
-                        description = await crawDetail(webPage, `https:${item.itemUrl}`)
+                        description = await crawDetail(`https:${item.itemUrl}`)
                         console.log(2)
                     }
                     const id = await insertProduct(item, cat.baseId, description.trim())
@@ -70,7 +58,6 @@ export async function crawLazada() {
             page++
         }
     }
-    browser.close()
 }
 
 async function insertProduct(product, category_id, description) {
@@ -118,7 +105,19 @@ async function getListings(cat, page) {
     return jsonResponse
 }
 
-async function crawDetail(page, url) {
+async function crawDetail(url) {
+    const browser = await startBrowser();
+    let page = await browser.newPage();
+    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setRequestInterception(true);
+    page.on('request', (req) => {
+        if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() === 'image' || req.url().includes('png') || req.url().includes('jpg')) {
+            req.abort();
+        }
+        else {
+            req.continue();
+        }
+    });
     console.log(`Navigating to ${url}`);
     let crawCount = 0
     let description = null
@@ -134,6 +133,7 @@ async function crawDetail(page, url) {
             }
         }
     }
+    await browser.close()
     return description
 }
 
