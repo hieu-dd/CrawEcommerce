@@ -13,6 +13,7 @@ let pool = new Pool(dbCredentials)
 export async function crawLazada() {
     console.log("Craw lazada start")
     let crawedCount = 0
+    let existCount = 0
     await insertPlatform(pool, 3, 'lazada')
     const categories = getCategories()
     for (const cat of categories) {
@@ -29,19 +30,21 @@ export async function crawLazada() {
             }
             for (const item of listingsResponse.mods.listItems) {
                 try {
-                    const exists = await checkProductExits(pool, item.itemId)
-                    console.log(exists)
-                    if (exists) continue
+                    console.log(`crawed : ${crawedCount} ---- exists: ${existCount}`)
+                    const exists = await checkProductExits(pool, item.itemId, 3)
+                    if (exists) {
+                        existCount++
+                        console.log(`${item.itemId} exist`)
+                        continue
+                    }
                     let description
                     if (item.description && item.description.length) {
                         description = item.description.join(', ')
-                        console.log(1)
                     } else {
                         description = await crawDetail(`https:${item.itemUrl}`)
-                        console.log(2)
                     }
-                    const id = await insertProduct(item, cat.baseId, description.trim())
-                    console.log(3)
+                    console.log(description)
+                    const id = await insertProduct(item, cat.baseId, description ?? "")
                     crawedCount++
                     if (id) {
                         const images = [...item.thumbs.map(e => e.image), item.image]
@@ -94,35 +97,39 @@ async function insertAttributes(attr, product_id) {
 }
 
 async function getListings(cat, page) {
-    const response = await fetch(`https://${cat.url}/?ajax=true&page=${page}`, {
-        method: 'GET',
-        headers: {
-            'accept': 'application/json, text/plain, */*',
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
-        },
-    });
-    const jsonResponse = await response.json();
-    return jsonResponse
+    try {
+        const response = await fetch(`https://${cat.url}/?ajax=true&page=${page}`, {
+            method: 'GET',
+            headers: {
+                'accept': 'application/json, text/plain, */*',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+            },
+        });
+        const jsonResponse = await response.json();
+        return jsonResponse
+    } catch (e) {
+        return null
+    }
 }
 
 async function crawDetail(url) {
-    const browser = await startBrowser();
-    let page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
-    await page.setRequestInterception(true);
-    page.on('request', (req) => {
-        if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() === 'image' || req.url().includes('png') || req.url().includes('jpg')) {
-            req.abort();
-        }
-        else {
-            req.continue();
-        }
-    });
     console.log(`Navigating to ${url}`);
     let crawCount = 0
     let description = null
     while (crawCount < 3 && !description) {
+        const browser = await startBrowser();
         try {
+            let page = await browser.newPage();
+            await page.setViewport({ width: 1920, height: 1080 });
+            await page.setRequestInterception(true);
+            page.on('request', (req) => {
+                if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() === 'image' || req.url().includes('png') || req.url().includes('jpg')) {
+                    req.abort();
+                }
+                else {
+                    req.continue();
+                }
+            });
             crawCount++
             await page.goto(url);
             await page.waitForSelector('.pdp-product-desc');
@@ -131,9 +138,11 @@ async function crawDetail(url) {
             if (crawCount == 3) {
                 console.log(e)
             }
+        } finally {
+            await browser.close()
         }
     }
-    await browser.close()
+
     return description
 }
 

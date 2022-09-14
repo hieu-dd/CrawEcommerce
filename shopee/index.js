@@ -44,7 +44,7 @@ export async function crawShopee() {
             }
             for (const item of sections.data.item) {
                 try {
-                    const exists = await checkProductExits(pool, item.itemid)
+                    const exists = await checkProductExits(pool, item.itemid, 2)
                     if (exists) continue
                     let failedTime = 0
                     while (failedTime < 5) {

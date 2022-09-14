@@ -65,7 +65,7 @@ export async function crawTiki() {
             }
             for (const item of listingsResponse.data) {
                 try {
-                    const exists = await checkProductExits(pool, item.id)
+                    const exists = await checkProductExits(pool, item.id, 1)
                     if (exists) continue
                     await sleep(250);
                     const itemDetail = await getDetail(item.id)

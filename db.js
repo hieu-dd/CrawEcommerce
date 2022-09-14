@@ -139,9 +139,9 @@ export async function insertPlatform(pool, id, name) {
   }
 }
 
-export async function checkProductExits(pool, sku) {
+export async function checkProductExits(pool, sku, platform_id) {
   try {
-    const res = await pool.query(`select exists(select 1 from partner_products where sku='${sku}')`)
+    const res = await pool.query(`select exists(select 1 from partner_products where sku='${sku}' and platform_id=${platform_id})`)
     return res && res.rows && res.rows[0] && res.rows[0].exists ? res.rows[0].exists : false
   } catch (e) {
     return false
